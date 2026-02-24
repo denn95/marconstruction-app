@@ -1,0 +1,47 @@
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+@if (showWhatsapp) {
+
+    <div 
+     class="fixed bottom-6 right-6 z-50 whatsapp-enter group">
+
+  <a 
+    href="https://wa.me/50373755714?text=Hello,%20I%20would%20like%20to%20get%20a%20quote%20for%20a%20residential%20project"
+    target="_blank"
+    class="flex items-center gap-3 
+           bg-gradient-to-r from-green-500 to-green-600 
+           hover:from-green-600 hover:to-green-700
+           text-white px-5 py-3 rounded-full shadow-2xl 
+           transition-all duration-300 
+           whatsapp-pulse"
+  >
+
+    <!-- Icono -->
+    <svg xmlns="http://www.w3.org/2000/svg" 
+         class="h-6 w-6"
+         fill="currentColor" 
+         viewBox="0 0 24 24">
+      <path d="M20.52 3.48A11.82 11.82 0 0012.01 0C5.38 0 .01 5.37.01 12c0 2.11.55 4.18 1.6 6.01L0 24l6.17-1.62A11.96 11.96 0 0012 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.19-3.48-8.52z"/>
+    </svg>
+
+    <!-- Texto solo móvil en ingles -->
+    <span class="block md:hidden font-semibold">
+      Get Quote
+    </span>
+
+  </a>
+
+  <!-- Tooltip Desktop -->
+  <div class="hidden md:block absolute right-full mr-4 top-1/2 -translate-y-1/2
+              bg-accent text-white text-sm px-3 py-1 rounded-md
+              opacity-0 group-hover:opacity-100
+              transition duration-300 pointer-events-none whitespace-nowrap">
+    Get Quote on WhatsApp
+  </div>
+
+</div>
+
+
+}
+
