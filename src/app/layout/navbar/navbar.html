@@ -1,0 +1,53 @@
+<nav 
+  [ngClass]="scrolled 
+    ? 'fixed w-full z-50 bg-primary shadow-lg transition-all duration-300' 
+    : 'fixed w-full z-50 bg-transparent transition-all duration-300'"
+  class="text-white"
+>
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <!-- LOGO -->
+    <div class="text-2xl font-bold tracking-wide">
+     <a routerLink="/" class="flex items-center gap-3">
+  <img src="assets/projects/logo8.png" 
+       alt="Ayala Construction - Residential Construction in New York City"
+       class="h-10 md:h-20 w-auto" />
+</a>
+    </div>
+
+    <!-- MENÚ DESKTOP -->
+    <div class="hidden md:flex gap-8 text-sm uppercase font-semibold">
+      <a routerLink="/" class="hover:text-accent transition">Home</a>
+      <a routerLink="/" fragment="services" class="hover:text-accent transition">Services</a>
+      <a routerLink="/" fragment="about" class="hover:text-accent transition">About Us</a>
+      <a routerLink="/" fragment="projects" class="hover:text-accent transition">Projects</a>
+      <a routerLink="/" fragment="why-us" class="hover:text-accent transition">Why Us?</a>
+      <a routerLink="/" fragment="contact" class="hover:text-accent transition">Contact</a>
+    </div>
+
+    <!-- BOTÓN HAMBURGUESA -->
+    <button 
+      class="md:hidden text-2xl"
+      (click)="menuOpen = !menuOpen"
+    >
+      ☰
+    </button>
+
+  </div>
+
+  <!-- MENÚ MOBILE (FUERA del contenedor principal) -->
+   @if(menuOpen){
+     <div class="md:hidden bg-primary text-white px-6 pb-6 space-y-4">
+       <a routerLink="/" class="block">Home</a>
+       <a routerLink="/" fragment="services" class="block">Services</a>
+       <a routerLink="/" fragment="about" class="block">About Us</a>
+       <a routerLink="/" fragment="projects" class="block">Projects</a>
+       <a routerLink="/" fragment="why-us" class="block">Why Us?</a>
+       <a routerLink="/" fragment="contact" class="block">Contact</a>
+     </div>
+
+   }
+
+</nav>
