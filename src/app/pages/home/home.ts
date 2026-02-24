@@ -5,6 +5,7 @@ import { About } from '../../sections/about/about';
 import { Cta } from '../../sections/cta/cta';
 import { WhyUs } from '../../sections/why-us/why-us';
 import { Projects } from '../../sections/projects/projects';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +14,16 @@ import { Projects } from '../../sections/projects/projects';
   styleUrl: './home.css',
 })
 export class Home implements AfterViewInit {
+  constructor(private titleService: Title, private metaService: Meta) { }
+
+  ngOnInit() {
+    this.titleService.setTitle('Home remodeling & constructión contractors NYC | Ayala Construction');
+    this.metaService.addTags([
+      { name: 'description', content: 'Ayala Construction provides expert home remodeling and construction services in NYC. We specialize in residential construction, renovations, and custom home builds.' },
+      { name: 'keywords', content: 'home remodeling, construction services, NYC, residential construction, renovations, custom home builds' },
+    ]);
+  }
+
   ngAfterViewInit() {
    
   setTimeout(() => {
