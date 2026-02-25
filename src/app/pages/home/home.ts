@@ -6,10 +6,11 @@ import { Cta } from '../../sections/cta/cta';
 import { WhyUs } from '../../sections/why-us/why-us';
 import { Projects } from '../../sections/projects/projects';
 import { Meta, Title } from '@angular/platform-browser';
+import { AreaService } from "../../sections/area-service/area-service";
 
 @Component({
   selector: 'app-home',
-  imports: [Hero,Services,About,  Projects, WhyUs, Cta],
+  imports: [Hero, Services, About, Projects, WhyUs, Cta, AreaService],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
@@ -17,10 +18,10 @@ export class Home implements AfterViewInit {
   constructor(private titleService: Title, private metaService: Meta) { }
 
   ngOnInit() {
-    this.titleService.setTitle('Home remodeling & constructión contractors NYC | Ayala Construction');
+    this.titleService.setTitle('General Contractor in Long Island, NY | Ayala Construction');
     this.metaService.addTags([
-      { name: 'description', content: 'Ayala Construction provides expert home remodeling and construction services in NYC. We specialize in residential construction, renovations, and custom home builds.' },
-      { name: 'keywords', content: 'home remodeling, construction services, NYC, residential construction, renovations, custom home builds' },
+      { name: 'description', content: 'Licensed home remodeling and general construction contractor serving Nassau and Suffolk County, Long Island. Free estimates available.' },
+      { name: 'keywords', content: 'Licensed general contractor serving Nassau and Suffolk County, Long Island. Residential construction, remodeling, roofing, plumbing and more. Free estimates.' },
     ]);
   }
 
