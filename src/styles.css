@@ -3,6 +3,7 @@
 @tailwind utilities;
 html {
   scroll-behavior: smooth;
+  background: #45434775;
 }
 .fade-up {
   opacity: 0;

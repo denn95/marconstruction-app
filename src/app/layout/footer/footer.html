@@ -73,16 +73,26 @@
             <span class="text-red-500 text-sm">Please enter a message describing your project.</span>
             }
           </div>
-
-          <button type="submit" [disabled]="!contactForm.valid"
-            class="md:col-span-2 bg-accent text-black py-3 rounded font-semibold hover:scale-105 transition">
-            Send Message
-          </button>
+<!-- Botón de envío-efecto loader -->
+<button type="submit" 
+    [disabled]="!contactForm.valid || loading"
+    class="md:col-span-2 bg-accent text-black py-3 rounded font-semibold hover:scale-105 transition flex items-center justify-center gap-3 w-full">
+    
+    @if (loading) {
+      <!-- SVG del Spinner -->
+      <svg class="animate-spin h-5 w-5 text-black" xmlns="http://www.w3.org" fill="none" viewBox="0 0 24 24">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+      </svg>
+      <span>Sending...</span>
+    } @else {
+      <span class="text-sm">Send Message</span>
+    }
+  </button>
 
         </form>
-
+        
         @if (successMessage) {
-
         <p class="text-green-400 text-center mt-6">
           ✅ Message sent successfully. We'll contact you soon.
         </p>
