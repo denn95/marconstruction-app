@@ -14,11 +14,11 @@ export class Bathroom implements AfterViewInit{
 
   ngOnInit() {
     //window.scrollTo(0, 0);
-    this.titleService.setTitle('Bathroom Renovation Contractor in NYC | Ayala Construction');
+    this.titleService.setTitle('Bathroom Renovation Contractor in Long Island, NY | Ayala Construction');
     this.metaService.updateTag({
       name: 'description',
       content:
-        'Professional bathroom renovation contractor in NYC. We specialize in modern bathroom remodeling, tile installation, plumbing upgrades, and luxury finishes. Free estimates available.',
+        'Professional bathroom renovation contractor in Long Island, NY. We specialize in modern bathroom remodeling, tile installation, plumbing upgrades, and luxury finishes. Free estimates available.',
     });
   }
 

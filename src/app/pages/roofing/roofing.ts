@@ -13,8 +13,8 @@ export class Roofing implements AfterViewInit {
 
   constructor(private titleService: Title, private metaService: Meta) { }
   ngOnInit() {
-    this.titleService.setTitle('Roofing Installation & Repair in NYC | Ayala Construction');
-    this.metaService.updateTag({ name: 'description', content: 'Professional roof installation, replacement, and repair services in NYC. We provide reliable roofing solutions for residential properties.' });
+    this.titleService.setTitle('Licensed Roofing Contractor in Long Island, NY | Ayala Construction');
+    this.metaService.updateTag({ name: 'description', content: 'Professional roof installation, replacement, and repair services in Long Island, NY. We provide reliable roofing solutions for residential properties.' });
   }
 
   ngAfterViewInit(): void {

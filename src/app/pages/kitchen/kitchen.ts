@@ -13,12 +13,12 @@ export class Kitchen implements AfterViewInit {
 constructor(private titleService: Title, private metaService: Meta) { }
 ngOnInit() {
 this.titleService.setTitle(
-    'Kitchen Remodeling Contractor in NYC | Ayala Construction'
+    'Kitchen Remodeling Contractor in Long Island, NY | Ayala Construction'
   );
 
   this.metaService.updateTag({
     name: 'description',
-    content: 'Professional kitchen remodeling contractor in NYC. We specialize in custom cabinets, countertops, flooring, plumbing and electrical upgrades. Free estimates available.'
+    content: 'Professional kitchen remodeling contractor in Long Island, NY. We specialize in custom cabinets, countertops, flooring, plumbing and electrical upgrades. Free estimates available.'
   });
 }
 
